@@ -1,0 +1,22 @@
+.boton-participar {
+    background-color: #27ae60;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .boton-participar:hover {
+    background-color: #1f8b47;
+  }
+  .encabezado-seccion {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
