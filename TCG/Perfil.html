@@ -8,19 +8,17 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
   <style>
-    body {
-      /*font-family: Arial, sans-serif;*/
-    }
+    
     .profile-container {
       max-width: 600px;
       margin: 50px auto;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(75, 186, 245, 0.87);
     }
     .profile-picture {
-      width: 150px;
+      width: 160px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
@@ -29,16 +27,27 @@
   </style>
 </head>
 <body>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-primary" href="Principal.html" role="button">Volver</button>
+  </div>
   <div class="container profile-container">
     <div class="text-center">
-      <img src="profile-picture.jpg" alt=" Añadir imagen" class="profile-picture" >
+      <img src="profile-picture.jpg" alt=" Añadir imagen" class="profile-picture rounded" >
+      
       <h2>Nombre de Usuario</h2>
       <p>Correo Electrónico: usuario@example.com</p>
       <p>Ubicación: Ciudad, País</p>
       <p>Descripción: sin Descripción</p>
     </div>
     <hr>
+    <h3>A cerca de mí: </h3>
+    <ul>
+      <li>Sobre mi:</li>
+      <li>Estudios:</li>
+      <li>Experiencias:</li>
+    </ul>
     <h3>Intereses</h3>
+    <hr>
     <ul>
       <li>Interés 1</li>
       <li>Interés 2</li>
