@@ -4,55 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/TCG/css/admin.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"<
-    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Agrega aquí tus estilos CSS o enlaces a archivos externos -->
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-       
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Contenido Premium
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-
-              
-            </ul>
+   <header class="bg-primary text-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
+      <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <h1 class="fs-1">Campus360</h1>
+      </a>
+  
+      <div class="col-md-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" href="login.html">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a class="nav-link active" href="Registro.html">Registrarse</a>
           </li>
         </ul>
-        
       </div>
+    </div>
+  </header>
+
+  <<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="./index.html">Quienes Somos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="Perfil.html">perfil</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="Calculo_nota.html">Calculadora</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link active" href="./Enlaces_Acad.html">Enlaces Académicos</a>
+          </li>
+
+
+        <li class="nav-item">
+          <a class="nav-link active" href="./admin_log.html">Administrador</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link active" href="./cont_premium.html">Premium</a>
+        </li>
+     </ul>
     </div>
   </nav>
 
 
+  <h1 class="mt-5 text-center">Bienvenido al Panel de Administración</h1>
+    <p class= "text-center">En esta sección podrás gestionar los recursos y usuarios del sistema.</p>
 
+  <div class="container mt-3">
+    <!-- Formulario de Inicio de Sesión -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="mt-5">
+          <h2 class="mb-4">Inicio de Sesión</h2>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        </form>
+      </div>
+    </div>
 
     <!-- Contenido de la página -->
-    <h1>Bienvenido al Panel de Administración</h1>
-    <p>En esta sección podrás gestionar los recursos y usuarios del sistema.</p>
+    
 
     <!-- Gestión de Usuarios -->
-    <h2>Gestión de Usuarios</h2>
+    <h2 class="mt-5">Gestión de Usuarios</h2>
     <ul>
         <li>Lista de usuarios registrados</li>
         <li>Funcionalidad para agregar, editar o eliminar usuarios</li>
@@ -60,7 +100,7 @@
     </ul>
 
     <!-- Recursos y Archivos -->
-    <h2>Recursos y Archivos</h2>
+    <h2 class="mt-5">Recursos y Archivos</h2>
     <p>Administra archivos como documentos e imágenes:</p>
     <ul>
         <li>Sección para cargar y organizar archivos</li>
@@ -68,7 +108,7 @@
     </ul>
 
     <!-- Configuración del Sistema -->
-    <h2>Configuración del Sistema</h2>
+    <h2 class="mt-5">Configuración del Sistema</h2>
     <p>Personaliza el sistema según tus preferencias:</p>
     <ul>
         <li>Opciones para cambiar contraseñas y notificaciones</li>
@@ -76,28 +116,28 @@
     </ul>
 
     <!-- Registro de Actividad -->
-    <h2>Registro de Actividad</h2>
+    <h2 class="mt-5">Registro de Actividad</h2>
     <p>Lleva un registro de las acciones realizadas:</p>
     <ul>
         <li>Detalles de fecha, acción y usuario responsable</li>
     </ul>
 
     <!-- Comunicación Interna -->
-    <h2>Comunicación Interna</h2>
+    <h2 class="mt-5">Comunicación Interna</h2>
     <p>Facilita la coordinación entre administradores:</p>
     <ul>
         <li>Sistema de mensajería o notificaciones</li>
     </ul>
 
     <!-- Informes y Estadísticas -->
-    <h2>Informes y Estadísticas</h2>
+    <h2 class="mt-5">Informes y Estadísticas</h2>
     <p>Visualiza datos relevantes sobre el uso del sistema:</p>
     <ul>
         <li>Generación de informes y gráficos</li>
     </ul>
 
     <!-- Soporte y Ayuda -->
-    <h2>Soporte y Ayuda</h2>
+    <h2 class="mt-5">Soporte y Ayuda</h2>
     <p>Ofrece asistencia a los usuarios:</p>
     <ul>
         <li>Sección de preguntas frecuentes (FAQ)</li>
@@ -105,15 +145,14 @@
     </ul>
 
     <!-- Seguridad y Auditoría -->
-    <h2>Seguridad y Auditoría</h2>
+    <h2 class="mt-5">Seguridad y Auditoría</h2>
     <p>Garantiza la seguridad del sistema:</p>
     <ul>
         <li>Medidas como cifrado de datos y autenticación de dos factores</li>
         <li>Auditorías periódicas para detectar vulnerabilidades</li>
     </ul>
+  </div>
 
-    <!-- Agrega más elementos HTML según tus necesidades -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
