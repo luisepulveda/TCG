@@ -1,58 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+p {
+  color: white;
+  font-size: 20px;
+  text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+}
 
+p.with-eight {
+  text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black, -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black, 0.05em 0.05em black;
+}
 
-body {
-    font-family: sans-serif; /* Set a base font family */
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #007bff; /* Adjust navbar background color */
-  }
-  
-  .container {
-    max-width: 960px; /* Limit container width for better responsiveness */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 2rem 0; /* Add some top and bottom padding */
-  }
-  
-  h1, h2, h3 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  p {
-    margin-bottom: 1rem;
-  }
-  
-  ul {
-    list-style: none; /* Remove default bullet points */
-    padding: 0;
-  }
-  
-  .nav-link {
-    color: white; /* Adjust navbar link color */
-  }
-  
-  .col-sm-8, .col-sm-4 {
-    padding: 1rem; /* Add some padding to content columns */
-  }
-  
-  .fakeimg {
-    width: 100%; /* Set a fixed width for the placeholder images */
-    height: 200px; /* Set a height for the placeholder images */
-    background-color: #ddd; /* Provide a background color for the placeholder */
-  }
-  
-  #local {
-    padding: 1rem; /* Add padding to the local section */
-    border-top: 1px solid #ddd; /* Add a border to the top of the local section */
-  }
-  
-  .mapa img {
-    max-width: 80%; /* Ensure the map image scales proportionally */
-  }
-  
-  /* Add more CSS rules as needed for further styling */
-  
+p {
+  background: rgba(33, 33, 33, 0.9);
+}

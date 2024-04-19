@@ -26,6 +26,16 @@ li{
 
 .carousel-inner{
   max-height: 39re;
+ 
+  
 }
 
-  
+
+<style>
+#intro {
+  background-color: blue; /* Cambia el color de fondo a azul */
+  color: white; /* Cambia el color del texto a blanco */
+  padding: 20px; /* Añade un espacio de relleno para mejorar la legibilidad */
+  border-radius: 10px; /* Añade esquinas redondeadas para un mejor aspecto visual */
+}
+</style>
