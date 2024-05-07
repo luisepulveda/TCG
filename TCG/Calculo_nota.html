@@ -133,13 +133,13 @@
     const notaExamen = parseFloat(document.getElementById('nota_examen').value);
 
     // Calculamos el promedio
-    const promedio = (nota1 + nota2 + nota3 + nota4) / 4;
+    const promedio = (nota1 + nota2 + nota3 + nota4) / 4; 
 
     // Calculamos la nota final
     const notaFinal = (promedio + notaExamen) / 2;
 
-    document.getElementById('promedio').value = promedio.toFixed(2);
-    document.getElementById('nota_final').value = notaFinal.toFixed(2);
+    document.getElementById('promedio').value = promedio.toFixed(1);
+    document.getElementById('nota_final').value = notaFinal.toFixed(1);
   }
 </script>
 
