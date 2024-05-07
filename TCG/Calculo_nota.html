@@ -125,7 +125,6 @@
 
 <script>
   function calcularNota() {
-    // Obtenemos los valores de las notas
     const nota1 = parseFloat(document.getElementById('nota1').value);
     const nota2 = parseFloat(document.getElementById('nota2').value);
     const nota3 = parseFloat(document.getElementById('nota3').value);
@@ -135,7 +134,6 @@
     // Calculamos el promedio
     const promedio = (nota1 + nota2 + nota3 + nota4) / 4; 
 
-    // Calculamos la nota final
     const notaFinal = (promedio + notaExamen) / 2;
 
     document.getElementById('promedio').value = promedio.toFixed(1);
