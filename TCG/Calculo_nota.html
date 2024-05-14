@@ -119,7 +119,7 @@
   </div>
 </div>
 
-<form action="Principal.html" method="POST">
+<form action="index.html" method="POST">
   <button type="submit" class="btn btn-secondary btn-block">Volver</button>
 </form>
 
@@ -133,9 +133,7 @@
 
     // Calculamos el promedio
     const promedio = (nota1 + nota2 + nota3 + nota4) / 4; 
-
     const notaFinal = (promedio + notaExamen) / 2;
-
     document.getElementById('promedio').value = promedio.toFixed(1);
     document.getElementById('nota_final').value = notaFinal.toFixed(1);
   }
