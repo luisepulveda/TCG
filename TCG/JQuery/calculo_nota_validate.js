@@ -10,4 +10,7 @@ $(document).ready(function() {
           
         $('.additional-notes').append(newNoteDiv);
     });
+    $('#delete-note').click(function(){
+            $('.additional-notes div:last-child').remove();
+        });
 });
