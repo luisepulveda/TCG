@@ -1,4 +1,4 @@
-345<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,7 @@
       background-position: center;
     }
 
-    .profile-container {
+    .cal-container {
       max-width: 600px;
       margin: 50px auto;
       padding: 20px;
@@ -81,19 +81,19 @@
     </div>
   </nav>
 
-  <div class="profile-container">
+  <div class="cal-container">
     <div class="row">
       <div class="col-md-12">
         <h1 class="text-center">Calculadora de Notas</h1>
         <form id="calculator-form">
-          <div class="mb-3">
-            <label for="nota1" class="form-label">Nota 1:</label>
-            <input type="number" class="form-control" id="nota1" min="0" max="100" required>
-          </div>
           <div class="additional-notes">
             <div class="mb-3">
+              <label for="nota1" class="form-label">Nota 1:</label>
+              <input type="number" class="form-control" id="nota1" min="20" max="70" name="nota1" required>
+            </div>
+            <div class="mb-3">
               <label for="nota2" class="form-label">Nota 2:</label>
-              <input type="number" class="form-control" id="nota2" min="0" max="100" required>
+              <input type="number" class="form-control" id="nota2" min="20" max="70" name="nota2" required>
             </div>
           </div>
           <button type="button" class="btn btn-primary" id="add-note-btn">+ Añadir</button>
@@ -103,14 +103,14 @@
             <hr>
           <div class="mb-3">  
             <label for="nota_examen" class="form-label">Nota del Examen:</label>
-            <input type="number" class="form-control" id="nota_examen" min="0" max="100" required>
+            <input type="number" class="form-control" id="nota_examen" min="20" max="70" name="nota_examen">
           </div>
           <div class="mb-3">
             <label for="promedio" class="form-label">Promedio:</label>
-            <input type="number" class="form-control" id="promedio" name="promedio" readonly>
+            <input type="number" class="form-control" id="promedio" name="promedio" placeholder="Resultado Promedio" readonly>
           </div>
           <div class="mb-3">
-            <button type="button" class="btn btn-primary" onclick="calcularNota()">Calcular</button>
+            <button type="submit" class="btn btn-primary" onclick="calcularNota()">Calcular</button>
           </div>
           <div class="mb-3">
             <label for="nota_final" class="form-label">Nota Final:</label>
