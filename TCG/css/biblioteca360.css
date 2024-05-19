@@ -3,29 +3,31 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 20px;
-    }
-      
-      #viewerCanvas {
-        width: 600px;
-        height: 500px;
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-      }
-      
+}
+
+body{
+  
+    margin: 0;
+    padding: 0;
+    background: url(../fondo4.jpg);   
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+  }
 
 
-.header{
+
+.header {
     background: #000;
-    color: #ffffff;
-    padding: 25px;
+    color: #fff;
+    padding: 10px;
     text-align: center;
     font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-  }
+}
 
-  
+
 
 main {
     padding: 20px;
@@ -71,5 +73,39 @@ button:hover {
 }
 
 
-  
-  
+/*------------------
+/* css stylesheet for books api PROJECT
+  author: Jorge L. jlvazquez
+  date: 2/24/2019
+*/
+
+body {
+    /* background-color: #76a9e0; */
+    background-image: url("/imagen/biblioteca2.jpg");
+    background-color: #017199;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center {
+    margin: auto;
+    margin-top: 200px;
+}
+
+#header {
+    font-family: 'Righteous', sans-serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Righteous', sans-serif;
+}
+
+.book-list {
+    margin-top: 50px;
+    visibility: hidden;
+}
