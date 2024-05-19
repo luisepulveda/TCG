@@ -1,72 +1,55 @@
 $(document).ready(function(){
- $('#Contenido').validate({
-  rules: {
-    username: {
-        required: true,
-        minlength: 5
-    },
-    email: {
-        required: true,
-        minlength: true,
-        type: true
-    },
-    password: {
-        required: true,
-        minlength: 8
+    $('#Contenido').validate({
+        rules: {
+            username: {
+                required: true,
+                minlength: 5
+            },
+            email: {
+                required: true,
+                email: true,
+                minlength: 1
+            },
+            password: {
+                required: true,
+                minlength: 8
+            }
+        },
+        messages: {
+            username: {
+                required: "Por favor, introduzca el nombre",
+                minlength: "Debe tener un mínimo de 5 caracteres"
+            },
+            email: {
+                required: "Por favor, introduzca el correo",
+                minlength: "Debe ser un correo válido",
+                email: "Debe ser un correo con formato válido"
+            },
+            password: {
+                required: "Por favor, introduzca la contraseña",
+                minlength: "Debe tener un mínimo de 8 caracteres"
+            }
+        },
+        submitHandler: function(form) {
+            saveUser();
+            form.reset();
+            return false;
+        }
+    });
+
+    function saveUser(){
+        var username = $('#username').val();
+        var email = $('#email').val();
+        var password = $('#password').val();
+        var user = {username, email, password};
+        saveUserToStorage(user);
     }
-  },
-  messages: {
-    username: {
-    
-        required:"porfavor, introduzca el nombre",
-        minlength:"Debe tener un minimo de 5 caracteres"
-    },
-    email: {
-        required:"porfavor, introduzca el correo",
-        minlength:"Debe ser un correo valido",
-        type:"Debe ser un correo valido"
-    },
-    password: {
-        required:"porfavor, introduzca la contraseña",
-        minlength:"Debe tener un minimo de 8 caracteres"
-    },
-   submitHandler:function(form){
-    addUser();
-    form.reset();
-    return false;
-   }
 
-  }     
- });
-
-loadUser();
-
-
+    function saveUserToStorage(user){
+        var users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Usuario creado con éxito');
+        console.log(localStorage.getItem('users'));
+    }
 });
-
-function addUser(){
-    var username = $('username').val();
-    var email = $('email').val();
-    var password = $('password').val();
-    var user = { username,email,password}
-
-    saveUser();
-    loadUser();
-
-};
-
-
-
-function saveUser(user){
-    var users = JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')) : [];
-    users.push(user);
-    localStorage.setItem('user',JSON.stringify(users));
-    
-}
-
-function loadUser(){
-    if(loadUser.getItem('user')){
-        var users = JSON.parse(localStorage.getItem('user'));
-        
-    }
-}
