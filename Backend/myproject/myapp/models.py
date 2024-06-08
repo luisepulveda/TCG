@@ -29,7 +29,7 @@ class boleta(models.Model):
     id_usuario = models.ForeignKey(usuario, on_delete=models.CASCADE)
     fecha = models.DateField()
     detallle = models.CharField(max_length=50)
-
+    monto = 
     def __str__(self):
         return f"{self.id_boleta}"
     
@@ -40,5 +40,5 @@ class detalle_boleta(models.Model):
     cantidad = models.IntegerField()
 
     def __call__(self):
-        return 
+        return f"{self.id_detalle_boleta}"
     
