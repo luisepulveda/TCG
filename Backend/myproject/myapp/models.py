@@ -20,7 +20,7 @@ class libro(models.Model):
     editorial = models.CharField(max_length=50)
     anio = models.IntegerField()
     genero = models.CharField(max_length=50)
-    
+    precio = models.IntegerField()
     def __str__(self):
         return f"{self.isbn} {self.titulo} {self.autor} {self.editorial} {self.anio} {self.genero}"
     
