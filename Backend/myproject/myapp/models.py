@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class usuario(models.Model):
-    id_usuario = models.CharField (max_length=50, primary_key=True, null=False)
+    RUT = models.CharField (max_length=10, primary_key=True, null=False)
     tipo_usuario = models.CharField(max_length=50)
     username = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
