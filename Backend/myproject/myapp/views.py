@@ -8,6 +8,7 @@ from rest_framework import permissions
 class usuarioViewSet(viewsets.ModelViewSet):
     queryset = usuario.objects.all()
     serializer_class=usuarioSerializer
+    permission_classes = [permissions.AllowAny]
 
 class libroViewSet(viewsets.ModelViewSet):
     queryset = libro.objects.all()
