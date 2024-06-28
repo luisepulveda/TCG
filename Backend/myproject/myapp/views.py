@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from.models import usuario,libro,boleta,detalle_boleta
 from .serializers import usuarioSerializer,libroSerializer,boletaSerializer,detalle_boletaSerializer,Userserializer
 from django.contrib.auth.models import User
-from rest_framework_simplejwt.tokens import RefreshToken
+#from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import permissions
 # Create your views here.
 
@@ -22,7 +22,7 @@ class boletaViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return Task.objects.filter(usuario=self.request.usuario)
+        return libro.objects.filter(usuario=self.request.usuario)
 
     def perform_create(self, serializer):
         serializer.save(usuario=self.request.usuario)
