@@ -10,7 +10,7 @@ class usuario(models.Model):
     password = models.CharField(max_length=50)
     
     def __str__(self):
-        return f"{self.id_usuario} {self.tipo_usuario} {self.username}{self.password}"
+        return f"{self.RUT} {self.tipo_usuario} {self.username}{self.password}"
     
 class libro(models.Model):
     isbn = models.CharField(max_length=13, primary_key=True,null=False)
