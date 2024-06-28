@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Campus360 </title>
+  <title>Campus360</title>
   <link rel="stylesheet" href="../TCG/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link favico="#">
-  </link>
+  <link rel="icon" href="#">
 </head>
+
 <style>
   body {
     background-image: url('fondo4.jpg');
@@ -27,17 +28,14 @@
     background-color: rgba(255, 255, 255, 0.600);
   }
 </style>
+
 <body>
 
-  <!--========================================================== -->
-  <!-- ENCABEZADO -->
-  <!--========================================================== -->
   <header class="bg-primary text-white">
     <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
       <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <h1 class="fs-5">Campus360</h1>
       </a>
-
       <div class="col-md-3">
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -58,22 +56,22 @@
           <a class="nav-link" href="index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#introduccion">Quienes Somos</a>
+          <a class="nav-link" href="#introduccion">Quienes Somos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="Perfil.html">Perfil</a>
+          <a class="nav-link" href="Perfil.html">Perfil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="Calculo_nota.html">Calculadora</a>
+          <a class="nav-link" href="Calculo_nota.html">Calculadora</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./Biblioteca360.html">Biblioteca360</a>
+          <a class="nav-link" href="./Biblioteca360.html">Biblioteca360</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/TCG/admin.html">Administrador</a>
+          <a class="nav-link" href="/TCG/admin.html">Administrador</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="./cont_premium.html">Premium</a>
+          <a class="nav-link" href="./cont_premium.html">Premium</a>
         </li>
       </ul>
     </div>
@@ -83,44 +81,47 @@
     <div class="row">
       <div class="col-md-12">
         <h1 class="text-center">Compra de libros</h1>
-        <div id="books" class="mb-3">
-          <!-- Libros disponibles -->
-        </div>
-        <h2 class="text-center">Carrito de Compras</h2>
-        <ul id="cart-items" class="list-group"></ul>
+        <div id="books-container"></div> <!-- Contenedor para los libros -->
       </div>
     </div>
   </div>
 
   <script>
     async function fetchBooks() {
-  try {
-    const response = await fetch('http://127.0.0.1:8000/api/libro/');  // Cambiar a 'libro' en la URL
-    if (!response.ok) {
-      throw new Error('Error al obtener los libros');
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/libros/');
+        if (!response.ok) {
+          throw new Error('Error al obtener los libros');
+        }
+        const books = await response.json();
+        displayBooks(books);
+      } catch (error) {
+        console.error('Error fetching books:', error);
+      }
     }
-    const books = await response.json();
-    displayBooks(books);
-  } catch (error) {
-    console.error('Error fetching books:', error);
-  }
-}
 
-function displayBooks(books) {
-  const booksContainer = document.getElementById('books-container');
-  booksContainer.innerHTML = '';
-  books.forEach(book => {
-    const bookElement = document.createElement('div');
-    bookElement.className = 'book d-flex justify-content-between align-items-center p-2 border mb-2';
-    bookElement.innerHTML = `
-      <span>${book.titulo} - $${book.precio}</span>
-      <button class="btn btn-primary" onclick="addToCart('${book.titulo}')">Añadir al Carrito</button>
-    `;
-    booksContainer.appendChild(bookElement);
-  });
-}
+    function displayBooks(books) {
+      const booksContainer = document.getElementById('books-container');
+      booksContainer.innerHTML = ''; // Limpiar el contenido actual
 
-window.onload = fetchBooks;
+      books.forEach(book => {
+        const bookElement = document.createElement('div');
+        bookElement.className = 'book d-flex justify-content-between align-items-center p-2 border mb-2';
+        bookElement.innerHTML = `
+          <span>${book.titulo} - $${book.precio}</span>
+          <button class="btn btn-primary" onclick="addToCart('${book.isbn}')">Añadir al Carrito</button>
+        `;
+        booksContainer.appendChild(bookElement);
+      });
+    }
+
+    function addToCart(isbn) {
+      console.log(`Libro con ISBN ${isbn} añadido al carrito.`);
+    }
+
+    window.onload = fetchBooks;
   </script>
+
 </body>
+
 </html>
