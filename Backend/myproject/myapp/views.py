@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from.models import usuario,libro,boleta,detalle_boleta
 from .serializers import usuarioSerializer,libroSerializer,boletaSerializer,detalle_boletaSerializer,Userserializer
 from django.contrib.auth.models import User
-#from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import permissions
 # Create your views here.
 
